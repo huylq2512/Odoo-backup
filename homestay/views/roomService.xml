@@ -1,0 +1,89 @@
+<odoo>
+	<record id="aroom_service_view_tree" model="ir.ui.view">
+		<field name="name">aroom.service.tree</field>
+		<field name="model">aaroom.service</field>
+		<field name="arch" type="xml">
+
+			<tree string="aroom_service">
+				<field name="id" />
+				<field name='name' />
+				<field name="price_service" sum="Price sum" />
+				<field name="room_id" />
+				<field name="service_id" />
+				<button name="btn_read_group" string='Read Group'
+					type="object" />
+			</tree>
+		</field>
+	</record>
+	<record id="arome_service_view_form" model="ir.ui.view">
+		<field name="name">aroom.service.form</field>
+		<field name="model">aaroom.service</field>
+		<field name="arch" type="xml">
+			<form string="aroom.service">
+				<header>
+					<button name="btn_mapped" string='btn_mapped' type="object" />
+					<button name="btn_create" string='btn_create' type="object" />
+					<button name="btn_write" string='btn_write' type="object" />
+					<button name="btn_browse" string='btn_browse' type="object" />
+					<button name="btn_search" string='btn_search' type="object" />
+					<button name="btn_search_count" string='btn_search_count'
+						type="object" />
+					<button name="btn_name_create" string='btn_name_create'
+						type="object" />
+					<button name="btn_default_get" string='btn_default_get'
+						type="object" />
+					<button name="btn_search_count" string='btn_search_count'
+						type="object" />
+					<button name="btn_read" string='btn_read' type="object" />
+					<button name="btn_fields_get" string='btn_fields_get'
+						type="object" />
+					<button name="btn_name_search" string='btn_name_search'
+						type="object" />
+					<button name="btn_read_group" string='Read Group'
+						type="object" />
+					<button name="btn_filtered" string='btn_filtered'
+						type="object" />
+				</header>
+				<sheet>
+					<group>
+						<group>
+
+							<field name="name" />
+							<field name="price_service" />
+							<field name="room_id" />
+							<field name="service_id" />
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="room_service_search" model="ir.ui.view">
+		<field name="name">aroom.service.search</field>
+		<field name="model">aaroom.service</field>
+		<field name="arch" type="xml">
+			<search string="room_service">
+				<field name="name" />
+				<filter string="Dọn dẹp" name="room_id"
+					domain="[('service_id.type', '=', 'Dọn Dẹp')]" />
+				<filter string="Ăn Uống" name="room_id"
+					domain="[('service_id.type', '=', 'Ăn Uống')]" />
+				<filter string="Giặt" name="room_id"
+					domain="[('service_id.type', '=', 'Giặt Giũ')]" />
+					<searchpanel>
+	         		<field name='room_id' icon='fa fa-home' select='multi' />
+	         		<field name='service_id' icon='fa fa-home' select='multi' />
+	         	</searchpanel>
+			</search>
+		</field>
+	</record>
+
+	<record id="arome_service_action" model="ir.actions.act_window">
+		<field name="name">arome_service</field>
+		<field name="res_model">aaroom.service</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem id="menu_arome_service" name="Room Service"
+		parent="menu_field" action='arome_service_action' />
+</odoo>

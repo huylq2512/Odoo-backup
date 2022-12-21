@@ -1,0 +1,26 @@
+<odoo>
+	<data>
+
+		<record id="homestay1" model="aahome">
+			<field name="name">Homestay Thuỷ Vân</field>
+			<field name="address">Ngã Ba Kim</field>
+			<field name="phone">0983716238</field>
+		</record>
+		<record id="homestay2" model="aahome">
+			<field name="name">Homestay Chiêu Quân</field>
+			<field name="address">La Pán Tẩn</field>
+			<field name="phone">098325832</field>
+		</record>
+		<record id="homestay3" model="aahome">
+			<field name="name">Homestay Như Ý</field>
+			<field name="address">Dế Xu Phình</field>
+			<field name="phone">0983746271</field>
+		</record>
+		<record id="homestay4" model="aahome">
+			<field name="name">Khèn Tây Bắc</field>
+			<field name="address">Ngã Ba Kim</field>
+			<field name="phone">09893984282</field>
+		</record>
+
+	</data>
+</odoo>

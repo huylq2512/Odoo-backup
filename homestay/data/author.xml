@@ -1,0 +1,20 @@
+<odoo>
+	<data>
+		<record id="author1" model="aauthor">
+			<field name="name">Minh</field>
+			<field name="card_id">1991275712</field>
+			<field name="number_phone">098323532</field>
+		</record>
+		<record id="author2" model="aauthor">
+			<field name="name">Phượng</field>
+			<field name="card_id">199237532</field>
+			<field name="number_phone">041256832</field>
+		</record>
+		<record id="author3" model="aauthor">
+			<field name="name">Quang</field>
+			<field name="card_id">1991234712</field>
+			<field name="number_phone">098321832</field>s
+		</record>
+
+	</data>
+</odoo>

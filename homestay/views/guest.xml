@@ -1,0 +1,49 @@
+<odoo>
+
+	<record id="aguest_view_tree" model="ir.ui.view">
+		<field name="name">aguest.tree</field>
+		<field name="model">aaguest</field>
+		<field name="arch" type="xml">
+			<tree string="aaguest">
+				<field name="name" />
+				<field name="booking_id" />
+				<field name='invoice_id'>
+					<tree>
+						<field name='status' />
+					</tree>
+				</field>
+			</tree>
+		</field>
+	</record>
+	<record id="aguest_view_form" model="ir.ui.view">
+		<field name="name">aguest.form</field>
+		<field name="model">aaguest</field>
+		<field name="priority" eval="1" />
+		<field name="arch" type="xml">
+			<form string="aguest" class="new">
+				<sheet>
+					<group>
+						<field name="name" />
+					</group>
+					<group>
+						<field name="front_card" widget="image" class="oe_avatar" />
+					</group>
+					<group>
+						<field name="back_card" widget="image" />
+					</group>
+					<group>
+						<field name="booking_id" />
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="guest_action" model="ir.actions.act_window">
+		<field name="name">Guest</field>
+		<field name="res_model">aaguest</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem id="menu_guest" name="Guest" parent="menu_field"
+		action='guest_action' />
+</odoo>

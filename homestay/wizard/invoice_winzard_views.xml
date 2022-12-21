@@ -1,0 +1,30 @@
+
+<odoo>
+	<record id="invoice_wizard_view" model="ir.ui.view">
+		<field name="name">invoice_wizard_view</field>
+		<field name="model">aainvoice.winzad</field>
+		<field name="arch" type="xml">
+			<form>
+				<group>
+					<field name="name" />
+				</group>
+				<footer>
+					<button string="Confirm" name="multi_update_author_id"
+						type="object" class="btn-primary" />
+					<button string="Cancel" class="btn-default" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+	<record id="invoice_wizard" model="ir.actions.act_window">
+		<field name="name">Create invoice</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">aainvoice.winzad</field>
+		<field name="binding_model_id" ref="model_aaguest" />
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+		<field name="view_id" ref="invoice_wizard_view" />
+	</record>
+
+</odoo>

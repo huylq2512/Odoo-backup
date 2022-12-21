@@ -1,0 +1,39 @@
+<odoo>
+	<data>
+		<record id="module_homestay" model="ir.module.category">
+			<field name="name">homestay</field>
+			<field name="sequence">1</field>
+		</record>
+
+		<record id="group_homestay_user" model="res.groups">
+			<field name="name">User</field>
+			<field name="category_id" ref="module_homestay" />
+		</record>
+
+		<record id="group_homestay_manager" model="res.groups">
+			<field name="name">Manager</field>
+			<field name="category_id" ref="module_homestay" />
+			<field name="implied_ids"
+				eval="[(4, ref('group_homestay_user'))]" />
+		</record>
+
+		<!-- Rule -->
+
+		<record id="homestay_room_user" model="ir.rule">
+			<field name="name">Room User</field>
+			<field name="model_id" ref="model_aaroom" />
+			<field name="groups"
+				eval="[(4, ref('homestay.group_homestay_user'))]" />
+			<field name="domain_force">[('status', '!=', False)]</field>
+		</record>
+		
+		<record id="homestay_room_manager" model="ir.rule">
+			<field name="name">Room Manager</field>
+			<field name="model_id" ref="model_aaroom" />
+			<field name="groups"
+				eval="[(4, ref('homestay.group_homestay_manager'))]" />
+			<field name="domain_force">[(1, '=', 1)]</field>
+		</record>
+	</data>
+
+</odoo>

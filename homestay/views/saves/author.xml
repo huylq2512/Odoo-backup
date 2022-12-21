@@ -1,0 +1,65 @@
+<odoo>
+	<record id="aauthor_view_search" model="ir.ui.view">
+		<field name="name">aauthor.tree</field>
+		<field name="model">aauthor</field>
+		<field name="arch" type="xml">
+			<search string="aauthor">
+				<field name="name" />
+				<field name="card_id" />
+				<field name="number_phone" />
+				<field name='homes_id' />
+			</search>
+		</field>
+	</record>
+	<record id="aauthor_view_tree" model="ir.ui.view">
+		<field name="name">aauthor.tree</field>
+		<field name="model">aauthor</field>
+		<field name="arch" type="xml">
+			<tree string="author">
+				<field name="name" />
+				<field name="card_id" />
+				<field name="number_phone" />
+				<field name='homes_id' />
+			</tree>
+		</field>
+
+	</record>
+	<record id="aauthor_view_form" model="ir.ui.view">
+		<field name="name">aauthor.tree</field>
+		<field name="model">aauthor</field>
+		<field name="priority" eval="1" />
+		<field name="arch" type="xml">
+			<form string="author" class="new">
+				<sheet>
+					<group>
+						<field name="name" />
+						<field name="card_id" />
+						<field name="number_phone" />
+					</group>
+					<notebook>
+						<page string="Danh sách phòng">
+							<field name='homes_id' />
+						</page>
+						<page string="Còn trống">
+							<field name='homes_id' />
+						</page>
+						<page string="Đang sử dụng">
+							<field name='homes_id' />
+						</page>
+						<page string="Đang sửa chữa">
+							<field name='homes_id' />
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="author_action" model="ir.actions.act_window">
+		<field name="name">Author</field>
+		<field name="res_model">aauthor</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem id="menu_author" name="Author" parent="menu_field"
+		action='author_action' />
+</odoo>

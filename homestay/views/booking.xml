@@ -1,0 +1,93 @@
+<odoo>
+	<record id="booking_view_tree" model="ir.ui.view">
+		<field name="name">booking.tree</field>
+		<field name="model">aabooking</field>
+		<field name="arch" type="xml">
+			<tree string="aabooking">
+				<field name="checkin"  widget='remaining_days'/>
+				<field name="checkout" widget='remaining_days'/>
+				<field name="room_pice" />
+				<field name='status' />
+				<field name="time_stay" />
+				<field name="guest_ids" />
+				<field name="room_ids" />
+			</tree>
+		</field>
+	</record>
+
+
+	<record id="booking_view_form" model="ir.ui.view">
+		<field name="name">booking.form</field>
+		<field name="model">aabooking</field>
+		<field name="arch" type="xml">
+			<form string="booking">
+				<sheet>
+					<group>
+						<group>
+							<field name="checkin" />
+							<field name="checkout" />
+							<field name="room_pice" />
+							<field name="time_stay" />
+							<field name='status' />
+							<field name="guest_ids" />
+							<field name="room_ids" />
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="booking_search" model="ir.ui.view">
+		<field name="name">booking.form</field>
+		<field name="model">aabooking</field>
+		<field name="arch" type="xml">
+			<search string="School Search">
+				<field name="name" />
+				<filter string="Đã Thanh Toán" name="status"
+					domain="[('status', '=', True)]" />
+				<filter string="Chưa Thanh Toán" name="status"
+					domain="[('status', '=', False)]" />
+	<!--  		<group expand="0" string="Group By">
+					<filter string="Tha" name="name" domain="[]"
+						context="{'group_by' : 'floor'}" />
+				</group> -->
+				<searchpanel>
+	         		<field name='invoice_ids' icon='fa fa-home' select='multi' />
+	         	</searchpanel>
+			</search>
+		</field>
+	</record>
+
+
+	<record id="booking_action" model="ir.actions.act_window">
+		<field name="name">Booking</field>
+		<field name="res_model">aabooking</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem id="menu_booking" name="Booking" parent="menu_field"
+		action='booking_action' />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</odoo>

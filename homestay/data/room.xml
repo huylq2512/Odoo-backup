@@ -1,0 +1,200 @@
+<odoo>
+	<data>
+		<!-- Homestay1 -->
+		<record id="room1" model="aaaroom">
+			<field name="name">Phòng 101</field>
+			<field name="floor">1</field>
+			<field name="status">True</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+			<field name="home_id">1</field>
+		</record>
+		<record id="room2" model="aaaroom">
+			<field name="name">Phòng 102</field>
+			<field name="floor">1</field>
+			<field name="status">False</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+		</record>
+		<record id="room3" model="aaaroom">
+			<field name="name">Phòng 103</field>
+			<field name="floor">1</field>
+			<field name="status">True</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+		</record>
+
+		<record id="room4" model="aaaroom">
+			<field name="name">Phòng 201</field>
+			<field name="floor">2</field>
+			<field name="status">False</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+			
+		</record>
+		<record id="room5" model="aaaroom">
+			<field name="name">Phòng 202</field>
+			<field name="floor">2</field>
+			<field name="status">True</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+		</record>
+		<record id="room6" model="aaaroom">
+			<field name="name">Phòng 203</field>
+			<field name="floor">2</field>
+			<field name="status">False</field>
+			<field name="price">300000</field>
+			<field name="amount">3</field>
+		</record>
+
+
+		<!-- Homestay2 -->
+		<record id="room7" model="aaaroom">
+			<field name="name">Phòng 101</field>
+			<field name="floor">1</field>
+			<field name="status">True</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+		</record>
+		<record id="room8" model="aaaroom">
+			<field name="name">Phòng 102</field>
+			<field name="floor">1</field>
+			<field name="status">False</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+		</record>
+		<record id="room9" model="aaroom">
+			<field name="name">Phòng 103</field>
+			<field name="floor">1</field>
+			<field name="status">True</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+		</record>
+
+		<record id="room10" model="aaroom">
+			<field name="name">Phòng 201</field>
+			<field name="floor">2</field>
+			<field name="status">False</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+		</record>
+		<record id="room11" model="aaroom">
+			<field name="name">Phòng 202</field>
+			<field name="floor">2</field>
+			<field name="status">True</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+		</record>
+		<record id="room12" model="aaroom">
+			<field name="name">Phòng 203</field>
+			<field name="floor">2</field>
+			<field name="status">False</field>
+			<field name="price">300000</field>
+			<field name="amount">3</field>
+		</record>
+		
+		
+		<!-- Homestay3 -->
+		<record id="room13" model="aaroom">
+			<field name="name">Phòng 101</field>
+			<field name="floor">1</field>
+			<field name="status">True</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+			
+		</record>
+		<record id="room14" model="aaroom">
+			<field name="name">Phòng 102</field>
+			<field name="floor">1</field>
+			<field name="status">False</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+			
+		</record>
+		<record id="room15" model="aaroom">
+			<field name="name">Phòng 103</field>
+			<field name="floor">1</field>
+			<field name="status">True</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+			
+		</record>
+
+		<record id="room16" model="aaroom">
+			<field name="name">Phòng 201</field>
+			<field name="floor">2</field>
+			<field name="status">False</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+			
+		</record>
+		<record id="room17" model="aaroom">
+			<field name="name">Phòng 202</field>
+			<field name="floor">2</field>
+			<field name="status">True</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+			
+		</record>
+		<record id="room18" model="aaroom">
+			<field name="name">Phòng 203</field>
+			<field name="floor">2</field>
+			<field name="status">False</field>
+			<field name="price">300000</field>
+			<field name="amount">3</field>
+			
+		</record>
+
+
+		<!-- Homestay4-->
+		<record id="room19" model="aaroom">
+			<field name="name">Phòng 101</field>
+			<field name="floor">1</field>
+			<field name="status">True</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+			
+		</record>
+		<record id="room20" model="aaroom">
+			<field name="name">Phòng 102</field>
+			<field name="floor">1</field>
+			<field name="status">False</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+			
+		</record>
+		<record id="room21" model="aaroom">
+			<field name="name">Phòng 103</field>
+			<field name="floor">1</field>
+			<field name="status">True</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+			
+		</record>
+
+		<record id="room22" model="aaroom">
+			<field name="name">Phòng 201</field>
+			<field name="floor">2</field>
+			<field name="status">False</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+
+		</record>
+		<record id="room23" model="aaroom">
+			<field name="name">Phòng 202</field>
+			<field name="floor">2</field>
+			<field name="status">True</field>
+			<field name="price">300000</field>
+			<field name="amount">2</field>
+			
+		</record>
+		<record id="room24" model="aaroom">
+			<field name="name">Phòng 203</field>
+			<field name="floor">2</field>
+			<field name="status">False</field>
+			<field name="price">300000</field>
+			<field name="amount">3</field>
+			
+		</record>
+	</data>
+</odoo>

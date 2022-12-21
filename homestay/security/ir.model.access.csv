@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_homestay_user,homestay.user,model_aahome,homestay.group_homestay_user,1,0,0,0
+access_homestay_manager,homestay.manager,model_aahome,homestay.group_homestay_manager,1,1,1,1
+access_room_user,homestay.user,model_aaroom,homestay.group_homestay_user,1,0,0,0
+access_room_manager,homestay.manager,model_aaroom,homestay.group_homestay_manager,1,1,1,1
+access_service_user,homestay.user,model_aaservice,homestay.group_homestay_user,1,0,0,0
+access_service_manager,homestay.manager,model_aaservice,homestay.group_homestay_manager,1,1,1,1
+access_room_service_user,homestay.user,model_aaroom_service,homestay.group_homestay_user,1,0,1,0
+access_room_service_manager,homestay.manager,model_aaroom_service,homestay.group_homestay_manager,1,1,1,1

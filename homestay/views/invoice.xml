@@ -1,0 +1,73 @@
+<odoo>
+	<record id="aaainvoice_view_search" model="ir.ui.view">
+		<field name="name">aainvoice.tree</field>
+		<field name="model">aainvoice</field>
+		<field name="arch" type="xml">
+			<search string="aainvoice">
+				<field name="name" />
+				<field name="guest_id" />
+			</search>
+		</field>
+	</record>
+	<record id="aaainvoice_view_tree" model="ir.ui.view">
+		<field name="name">aaainvoice.tree</field>
+		<field name="model">aainvoice</field>
+		<field name="arch" type="xml">
+			<tree string="aainvoice">
+				<field name="guest_id" />
+				<field name="test_soluong" />
+
+			</tree>
+		</field>
+	</record>
+	<record id="aaainvoice_view_form" model="ir.ui.view">
+		<field name="name">aaainvoice.form</field>
+		<field name="model">aainvoice</field>
+		<field name="priority" eval="1" />
+		<field name="arch" type="xml">
+			<form string="aainvoice" class="new">
+				<sheet>
+					<group>
+						<field name="guest_id" />
+						<field name="test_soluong" />
+						<field name="status" />
+					</group>
+					<notebook>
+						<page string="Tiền Phòng">
+							<field name="booking_id">
+								<tree string="aainvoicee">
+									<field name="checkin" />
+									<field name="checkout" />
+									<field name="room_pice" />
+									<field name="time_stay" />
+									<field name="guest_ids" />
+									<field name="room_ids" />
+								</tree>
+							</field>
+							<field name="sum_price_room" />
+						</page>
+						<page string="Dịch vụ">
+							<field name="sum_price_service" />
+						</page>
+					</notebook>
+					<group>
+						<group>
+							<field name="sum_price" />
+						</group>
+					</group>
+					<footer>
+					<button string="Thanh Toán" name="acction" type="object" class="btn-primary"  attrs="{'invisible':[('status','=',True)]}" />
+					</footer>
+				</sheet>
+
+			</form>
+		</field>
+	</record>
+	<record id="aainvoice_action" model="ir.actions.act_window">
+		<field name="name">aainvoicestay</field>
+		<field name="res_model">aainvoice</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem id="menu_aainvoice" name="aainvoicestay"
+		parent="menu_field" action='aainvoice_action' />
+</odoo>
